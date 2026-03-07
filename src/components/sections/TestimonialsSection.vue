@@ -72,7 +72,7 @@ const testimonials: Testimonial[] = [
                         <p class="mt-3 font-semibold text-white">
                             {{ testimonial.author }}
                         </p>
-                        <p class="text-sm text-slate-500">
+                        <p class="text-sm text-slate-400">
                             {{ testimonial.company }}
                         </p>
                     </figcaption>

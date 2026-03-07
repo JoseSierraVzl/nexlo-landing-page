@@ -57,10 +57,10 @@ const socialLinks = [
                     >
                         Nexlo
                     </a>
-                    <p class="text-sm text-slate-500">
+                    <p class="text-sm text-slate-400">
                         Sitios Web Profesionales
                     </p>
-                    <p class="max-w-xs text-sm leading-relaxed text-slate-500">
+                    <p class="max-w-xs text-sm leading-relaxed text-slate-400">
                         Más de una década ayudando a empresas a crecer con
                         presencia digital sólida y sostenible.
                     </p>
@@ -76,7 +76,7 @@ const socialLinks = [
                         <li v-for="link in serviceLinks" :key="link.label">
                             <a
                                 :href="link.href"
-                                class="text-sm text-slate-500 transition-colors hover:text-nexlo-blue-light"
+                                class="text-sm text-slate-400 transition-colors hover:text-nexlo-blue-light"
                             >
                                 {{ link.label }}
                             </a>
@@ -94,7 +94,7 @@ const socialLinks = [
                         <li>
                             <a
                                 href="mailto:hola@nexlo.com.ar"
-                                class="text-sm text-slate-500 transition-colors hover:text-nexlo-blue-light"
+                                class="text-sm text-slate-400 transition-colors hover:text-nexlo-blue-light"
                             >
                                 hola@nexlo.com.ar
                             </a>
@@ -102,7 +102,7 @@ const socialLinks = [
                         <li>
                             <a
                                 href="https://wa.me/5491100000000"
-                                class="text-sm text-slate-500 transition-colors hover:text-nexlo-blue-light"
+                                class="text-sm text-slate-400 transition-colors hover:text-nexlo-blue-light"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -130,7 +130,7 @@ const socialLinks = [
                             :class="
                                 cn(
                                     'flex h-9 w-9 items-center justify-center rounded-lg',
-                                    'border border-white/10 text-slate-500',
+                                    'border border-white/10 text-slate-400',
                                     'transition-all duration-200 hover:border-nexlo-blue-mid/60 hover:text-nexlo-blue-light',
                                 )
                             "
@@ -146,7 +146,7 @@ const socialLinks = [
             </div>
 
             <div class="mt-12 border-t border-white/10 pt-8">
-                <p class="text-center text-xs text-slate-600">
+                <p class="text-center text-xs text-slate-400">
                     &copy; 2025 Nexlo. Todos los derechos reservados.
                 </p>
             </div>

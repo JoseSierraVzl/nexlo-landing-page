@@ -248,6 +248,7 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
 
                         <a
                             href="#contacto"
+                            aria-label="Ir a contacto"
                             class="group absolute top-3 right-3 flex h-15 w-15 flex-col items-center justify-center rounded-full shadow-xl transition-transform hover:scale-105"
                             style="
                                 background: oklch(0.62 0.22 255);

@@ -93,7 +93,7 @@ const noiseSvg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/s
                         <div
                             class="h-px w-16 bg-gradient-to-r from-nexlo-blue-mid to-transparent"
                         />
-                        <span class="text-sm text-slate-500"
+                        <span class="text-sm text-slate-400"
                             >Claridad. Solidez. Evolución.</span
                         >
                     </div>
