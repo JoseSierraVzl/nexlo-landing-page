@@ -974,7 +974,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:^14.1.0":
+"@vueuse/core@npm:^14.1.0, @vueuse/core@npm:^14.2.1":
   version: 14.2.1
   resolution: "@vueuse/core@npm:14.2.1"
   dependencies:
@@ -1662,10 +1662,11 @@ __metadata:
     "@types/node": "npm:^25.3.0"
     "@vitejs/plugin-vue": "npm:^6.0.2"
     "@vue/tsconfig": "npm:^0.8.1"
+    "@vueuse/core": "npm:^14.2.1"
     class-variance-authority: "npm:^0.7.1"
     clsx: "npm:^2.1.1"
     lucide-vue-next: "npm:^0.575.0"
-    reka-ui: "npm:^2.8.2"
+    reka-ui: "npm:^2.9.0"
     tailwind-merge: "npm:^3.5.0"
     tailwindcss: "npm:^4.2.0"
     tw-animate-css: "npm:^1.4.0"
@@ -1770,7 +1771,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reka-ui@npm:^2.8.2":
+"reka-ui@npm:^2.9.0":
   version: 2.9.0
   resolution: "reka-ui@npm:2.9.0"
   dependencies:

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-
-const noiseSvg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22noise%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/><feColorMatrix type=%22saturate%22 values=%220%22/></filter><rect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%221%22/></svg>")`;
+import teamImage from "@/assets/team-nexlo.webp";
 </script>
 
 <template>
@@ -16,53 +15,23 @@ const noiseSvg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/s
                                 'border border-white/10',
                             )
                         "
-                        role="img"
-                        aria-label="Imagen decorativa del equipo Nexlo"
                     >
-                        <div
-                            class="absolute inset-0"
-                            style="
-                                background: linear-gradient(
-                                    160deg,
-                                    oklch(0.25 0 0) 0%,
-                                    oklch(0.18 0 0) 40%,
-                                    oklch(0.12 0 0) 100%
-                                );
-                            "
-                            aria-hidden="true"
+                        <img
+                            :src="teamImage"
+                            alt="Equipo Nexlo"
+                            class="h-full w-full object-cover object-center"
                         />
                         <div
-                            class="absolute inset-0 opacity-20"
-                            :style="{
-                                backgroundImage: noiseSvg,
-                                backgroundSize: '200px 200px',
-                            }"
-                            aria-hidden="true"
-                        />
-
-                        <div
-                            class="absolute bottom-0 left-0 right-0 h-3/4"
-                            style="
-                                background: linear-gradient(
-                                    to top,
-                                    oklch(0.22 0 0) 0%,
-                                    oklch(0.28 0.02 250) 50%,
-                                    transparent 100%
-                                );
-                            "
+                            class="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black/60 to-transparent"
                             aria-hidden="true"
                         />
                         <div
                             class="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-nexlo-blue-light via-nexlo-blue-mid to-transparent"
                             aria-hidden="true"
                         />
-                        <div
-                            class="absolute right-6 top-6 h-3 w-3 rounded-full bg-nexlo-blue-light shadow-lg shadow-nexlo-blue-mid/60"
-                            aria-hidden="true"
-                        />
-                        <div class="absolute bottom-6 left-6 right-6">
+                        <div class="absolute bottom-6 left-6">
                             <p
-                                class="text-xs font-medium uppercase tracking-widest text-slate-500"
+                                class="text-xs font-medium uppercase tracking-widest text-slate-300"
                             >
                                 Equipo Nexlo
                             </p>

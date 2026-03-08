@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { Mail, MessageCircle, Linkedin, Instagram } from "lucide-vue-next";
 import { cn } from "@/lib/utils";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+const waLink = `https://wa.me/584129117802?text=${encodeURIComponent("Hola, vengo del sitio web de Nexlo y me gustaría obtener más información sobre sus servicios.")}`;
 
 interface FooterLink {
     label: string;
@@ -23,7 +31,7 @@ const socialLinks = [
     {
         icon: MessageCircle,
         label: "WhatsApp",
-        href: "https://wa.me/584129117802",
+        href: waLink,
     },
     { icon: Linkedin, label: "LinkedIn", href: "#" },
     { icon: Instagram, label: "Instagram", href: "#" },
@@ -101,47 +109,64 @@ const socialLinks = [
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="https://wa.me/5491100000000"
-                                class="text-sm text-slate-400 transition-colors hover:text-nexlo-blue-light"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                WhatsApp
-                            </a>
+                            <TooltipProvider>
+                                <Tooltip>
+                                    <TooltipTrigger as-child>
+                                        <a
+                                            :href="waLink"
+                                            class="text-sm text-slate-400 transition-colors hover:text-nexlo-blue-light"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            WhatsApp
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        Abrir en WhatsApp
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
                         </li>
                     </ul>
 
                     <div class="mt-2 flex items-center gap-4">
-                        <a
-                            v-for="social in socialLinks"
-                            :key="social.label"
-                            :href="social.href"
-                            :aria-label="social.label"
-                            :target="
-                                social.href.startsWith('http')
-                                    ? '_blank'
-                                    : undefined
-                            "
-                            :rel="
-                                social.href.startsWith('http')
-                                    ? 'noopener noreferrer'
-                                    : undefined
-                            "
-                            :class="
-                                cn(
+                        <template v-for="social in socialLinks" :key="social.label">
+                            <TooltipProvider v-if="social.label === 'WhatsApp'">
+                                <Tooltip>
+                                    <TooltipTrigger as-child>
+                                        <a
+                                            :href="social.href"
+                                            :aria-label="social.label"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            :class="cn(
+                                                'flex h-9 w-9 items-center justify-center rounded-lg',
+                                                'border border-white/10 text-slate-400',
+                                                'transition-all duration-200 hover:border-nexlo-blue-mid/60 hover:text-nexlo-blue-light',
+                                            )"
+                                        >
+                                            <component :is="social.icon" class="size-4" aria-hidden="true" />
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>Abrir en WhatsApp</TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
+
+                            <a
+                                v-else
+                                :href="social.href"
+                                :aria-label="social.label"
+                                :target="social.href.startsWith('http') ? '_blank' : undefined"
+                                :rel="social.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+                                :class="cn(
                                     'flex h-9 w-9 items-center justify-center rounded-lg',
                                     'border border-white/10 text-slate-400',
                                     'transition-all duration-200 hover:border-nexlo-blue-mid/60 hover:text-nexlo-blue-light',
-                                )
-                            "
-                        >
-                            <component
-                                :is="social.icon"
-                                class="size-4"
-                                aria-hidden="true"
-                            />
-                        </a>
+                                )"
+                            >
+                                <component :is="social.icon" class="size-4" aria-hidden="true" />
+                            </a>
+                        </template>
                     </div>
                 </div>
             </div>

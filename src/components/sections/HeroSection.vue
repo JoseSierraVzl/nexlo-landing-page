@@ -1,6 +1,18 @@
 <script setup lang="ts">
-import { ArrowUpRight, Mail, Phone, Briefcase } from "lucide-vue-next";
-import heroImage from "@/assets/hero-1.png";
+import { MessageCircle, Mail, Briefcase } from "lucide-vue-next";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+const waPhone = "584129117802";
+const waMessage = encodeURIComponent(
+    "Hola, vengo del sitio web de Nexlo y me gustaría obtener más información sobre sus servicios."
+);
+const waLink = `https://wa.me/${waPhone}?text=${waMessage}`;
+import heroImage from "@/assets/hero-section.webp";
 
 const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.75%22 numOctaves=%224%22 stitchTiles=%22stitch%22/></filter><rect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/></svg>")`;
 </script>
@@ -123,23 +135,34 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                                 jams4300@gmail.com
                             </a>
 
-                            <a
-                                href="tel:+584129117802"
-                                class="group flex items-center gap-2 text-sm transition-colors hover:text-nexlo-blue-light"
-                                style="color: #666"
-                            >
-                                <span
-                                    class="flex h-7 w-7 items-center justify-center rounded-full"
-                                    style="background: #1a1a1a"
-                                >
-                                    <Phone
-                                        class="size-3.5"
-                                        style="color: oklch(0.62 0.22 255)"
-                                        aria-hidden="true"
-                                    />
-                                </span>
-                                +58 412 9117802
-                            </a>
+                            <TooltipProvider>
+                                <Tooltip>
+                                    <TooltipTrigger as-child>
+                                        <a
+                                            :href="waLink"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="group flex items-center gap-2 text-sm transition-colors hover:text-nexlo-blue-light"
+                                            style="color: #666"
+                                        >
+                                            <span
+                                                class="flex h-7 w-7 items-center justify-center rounded-full"
+                                                style="background: #1a1a1a"
+                                            >
+                                                <MessageCircle
+                                                    class="size-3.5"
+                                                    style="color: oklch(0.62 0.22 255)"
+                                                    aria-hidden="true"
+                                                />
+                                            </span>
+                                            +58 412 9117802
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        Abrir en WhatsApp
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
                         </div>
                     </div>
                 </div>
@@ -167,6 +190,11 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                             :src="heroImage"
                             alt="Hero visual Nexlo"
                             class="absolute"
+                            width="480"
+                            height="576"
+                            fetchpriority="high"
+                            loading="eager"
+                            decoding="sync"
                             style="
                                 filter: drop-shadow(
                                         0 0 40px oklch(0.52 0.22 255 / 0.6)
@@ -178,13 +206,7 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                         />
 
                         <div
-                            class="absolute left-6 top-6 select-none font-bold italic opacity-25"
-                            style="
-                                font-size: 1.75rem;
-                                color: white;
-                                font-family: Georgia, serif;
-                                letter-spacing: -0.02em;
-                            "
+                            class="absolute left-6 top-6 text-xs font-medium uppercase tracking-widest text-slate-300"
                             aria-hidden="true"
                         >
                             Nexlo
@@ -246,20 +268,31 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                             </div>
                         </div>
 
-                        <a
-                            href="#contacto"
-                            aria-label="Ir a contacto"
-                            class="group absolute top-3 right-3 flex h-15 w-15 flex-col items-center justify-center rounded-full shadow-xl transition-transform hover:scale-105"
-                            style="
-                                background: oklch(0.62 0.22 255);
-                                box-shadow: 0 0 24px oklch(0.52 0.22 255 / 0.5);
-                            "
-                        >
-                            <ArrowUpRight
-                                class="size-6 text-white"
-                                aria-hidden="true"
-                            />
-                        </a>
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger as-child>
+                                    <a
+                                        :href="waLink"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Contactar por WhatsApp"
+                                        class="group absolute top-3 right-3 flex h-15 w-15 flex-col items-center justify-center rounded-full shadow-xl transition-transform hover:scale-105"
+                                        style="
+                                            background: oklch(0.62 0.22 255);
+                                            box-shadow: 0 0 24px oklch(0.52 0.22 255 / 0.5);
+                                        "
+                                    >
+                                        <MessageCircle
+                                            class="size-6 text-white"
+                                            aria-hidden="true"
+                                        />
+                                    </a>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    Abrir en WhatsApp
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
                     </div>
                 </div>
             </div>

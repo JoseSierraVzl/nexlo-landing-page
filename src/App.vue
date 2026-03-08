@@ -1,14 +1,15 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from "vue";
 import NavBar from "@/components/sections/NavBar.vue";
 import HeroSection from "@/components/sections/HeroSection.vue";
-import AboutSection from "@/components/sections/AboutSection.vue";
-import ServicesSection from "@/components/sections/ServicesSection.vue";
-import VisionSection from "@/components/sections/VisionSection.vue";
-// import MetricsSection from "@/components/sections/MetricsSection.vue";
-import TeamSection from "@/components/sections/TeamSection.vue";
-import TestimonialsSection from "@/components/sections/TestimonialsSection.vue";
-import CtaSection from "@/components/sections/CtaSection.vue";
-import FooterSection from "@/components/sections/FooterSection.vue";
+
+const AboutSection = defineAsyncComponent(() => import("@/components/sections/AboutSection.vue"));
+const ServicesSection = defineAsyncComponent(() => import("@/components/sections/ServicesSection.vue"));
+const VisionSection = defineAsyncComponent(() => import("@/components/sections/VisionSection.vue"));
+const TeamSection = defineAsyncComponent(() => import("@/components/sections/TeamSection.vue"));
+const TestimonialsSection = defineAsyncComponent(() => import("@/components/sections/TestimonialsSection.vue"));
+const CtaSection = defineAsyncComponent(() => import("@/components/sections/CtaSection.vue"));
+const FooterSection = defineAsyncComponent(() => import("@/components/sections/FooterSection.vue"));
 </script>
 
 <template>
