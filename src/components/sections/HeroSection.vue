@@ -106,7 +106,7 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                     <div class="border-t border-white/8 pt-5">
                         <div class="flex flex-wrap items-center gap-6">
                             <a
-                                href="mailto:hola@nexlo.com.ar"
+                                href="mailto:jams4300@gmail.com"
                                 class="group flex items-center gap-2 text-sm transition-colors hover:text-nexlo-blue-light"
                                 style="color: #666"
                             >
@@ -120,11 +120,11 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                                         aria-hidden="true"
                                     />
                                 </span>
-                                hola@nexlo.com.ar
+                                jams4300@gmail.com
                             </a>
 
                             <a
-                                href="tel:+5491100000000"
+                                href="tel:+584129117802"
                                 class="group flex items-center gap-2 text-sm transition-colors hover:text-nexlo-blue-light"
                                 style="color: #666"
                             >
@@ -138,7 +138,7 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                                         aria-hidden="true"
                                     />
                                 </span>
-                                +54 9 11 XXXX-XXXX
+                                +58 412 9117802
                             </a>
                         </div>
                     </div>

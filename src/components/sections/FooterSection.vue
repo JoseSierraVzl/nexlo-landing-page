@@ -18,12 +18,12 @@ const socialLinks = [
     {
         icon: Mail,
         label: "Correo electrónico",
-        href: "mailto:hola@nexlo.com.ar",
+        href: "mailto:jams4300@gmail.com",
     },
     {
         icon: MessageCircle,
         label: "WhatsApp",
-        href: "https://wa.me/5491100000000",
+        href: "https://wa.me/584129117802",
     },
     { icon: Linkedin, label: "LinkedIn", href: "#" },
     { icon: Instagram, label: "Instagram", href: "#" },
@@ -93,10 +93,11 @@ const socialLinks = [
                     <ul class="flex flex-col gap-3" role="list">
                         <li>
                             <a
-                                href="mailto:hola@nexlo.com.ar"
+                                href="mailto:jams4300@gmail.com"
                                 class="text-sm text-slate-400 transition-colors hover:text-nexlo-blue-light"
                             >
-                                hola@nexlo.com.ar
+                                jams4300@gmail.com
+
                             </a>
                         </li>
                         <li>

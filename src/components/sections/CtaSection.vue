@@ -36,7 +36,7 @@ import { cn } from '@/lib/utils'
       <div class="mt-10 flex flex-col items-center gap-4">
         <Button
           as="a"
-          href="mailto:hola@nexlo.com.ar"
+          href="mailto:jams4300@gmail.com"
           size="lg"
           :class="
             cn(
@@ -50,11 +50,11 @@ import { cn } from '@/lib/utils'
         </Button>
 
         <a
-          href="mailto:hola@nexlo.com.ar"
+          href="mailto:jams4300@gmail.com"
           class="text-sm text-slate-400 transition-colors hover:text-nexlo-blue-light"
         >
           O escribinos a
-          <span class="font-medium text-nexlo-blue-light">hola@nexlo.com.ar</span>
+          <span class="font-medium text-nexlo-blue-light">jams4300@gmail.com</span>
         </a>
       </div>
     </div>

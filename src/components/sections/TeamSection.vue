@@ -10,21 +10,21 @@ interface TeamMember {
 
 const team: TeamMember[] = [
     {
-        name: "Miembro del Equipo",
-        role: "Diseñadora Web",
-        focus: "Interfaces que comunican con claridad y convierten con propósito.",
+        name: "Cristian Cala",
+        role: "Full Stack Developer",
+        focus: "Diseño interfaces de alto impacto que transforman visitas en clientes reales.",
         gradient: "from-nexlo-blue-deep via-nexlo-blue-mid to-nexlo-blue-light",
     },
     {
-        name: "Miembro del Equipo",
-        role: "Desarrollador Frontend",
-        focus: "Código limpio, accesible y listo para escalar en cualquier etapa.",
+        name: "Jose Sierra",
+        role: "Full Stack Developer",
+        focus: "Construyo arquitecturas sólidas y escalables que sostienen el crecimiento del negocio.",
         gradient: "from-nexlo-blue-mid via-nexlo-blue-light to-nexlo-blue-deep",
     },
     {
-        name: "Miembro del Equipo",
-        role: "Project Manager",
-        focus: "Procesos claros para entregar a tiempo, con calidad y sin sorpresas.",
+        name: "Maikel Bello",
+        role: "Full Stack Developer",
+        focus: "Optimizo la lógica de negocio para garantizar productos rápidos, fiables y sin fricciones.",
         gradient: "from-nexlo-blue-deep to-nexlo-blue-mid",
     },
 ];
