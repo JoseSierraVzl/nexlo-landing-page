@@ -2,8 +2,11 @@
 <html lang="es" class="dark">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://nexloapp.net/" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Nexlo" />
 
         <!-- Preconnect to Google Fonts to reduce latency -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,7 +49,6 @@
             property="og:image:alt"
             content="Nexlo — Sitios Web Profesionales"
         />
-        <meta property="og:locale" content="es_AR" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Nexlo — Sitios Web Profesionales" />
@@ -66,6 +68,32 @@
             name="google-site-verification"
             content="RVpPpFgA-2seR2mtIdZjC47-GhWj4N-NqsclVxPOpKE"
         />
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://nexloapp.net/#website",
+                        "url": "https://nexloapp.net/",
+                        "name": "Nexlo",
+                        "inLanguage": "es"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https://nexloapp.net/#organization",
+                        "name": "Nexlo",
+                        "url": "https://nexloapp.net/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://nexloapp.net/logo.png"
+                        },
+                    "image": "https://nexloapp.net/logo.png",
+                    "description": "Más de una década creando sitios web que hacen crecer negocios."
+                    }
+                ]
+            }
+        </script>
     </head>
     <body>
         <div id="app"></div>
