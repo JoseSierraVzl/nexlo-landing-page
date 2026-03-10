@@ -32,9 +32,10 @@ const socialLinks = [
         icon: MessageCircle,
         label: "WhatsApp",
         href: waLink,
+        tooltip: "Abrir en WhatsApp",
     },
     { icon: Linkedin, label: "LinkedIn", href: "#" },
-    { icon: Instagram, label: "Instagram", href: "#" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/nexlo.app/", tooltip: "Abrir Instagram" },
 ] as const;
 </script>
 
@@ -131,14 +132,14 @@ const socialLinks = [
 
                     <div class="mt-2 flex items-center gap-4">
                         <template v-for="social in socialLinks" :key="social.label">
-                            <TooltipProvider v-if="social.label === 'WhatsApp'">
+                            <TooltipProvider v-if="'tooltip' in social">
                                 <Tooltip>
                                     <TooltipTrigger as-child>
                                         <a
                                             :href="social.href"
                                             :aria-label="social.label"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                            :target="social.href.startsWith('http') ? '_blank' : undefined"
+                                            :rel="social.href.startsWith('http') ? 'noopener noreferrer' : undefined"
                                             :class="cn(
                                                 'flex h-9 w-9 items-center justify-center rounded-lg',
                                                 'border border-white/10 text-slate-400',
@@ -148,7 +149,7 @@ const socialLinks = [
                                             <component :is="social.icon" class="size-4" aria-hidden="true" />
                                         </a>
                                     </TooltipTrigger>
-                                    <TooltipContent>Abrir en WhatsApp</TooltipContent>
+                                    <TooltipContent>{{ social.tooltip }}</TooltipContent>
                                 </Tooltip>
                             </TooltipProvider>
 
