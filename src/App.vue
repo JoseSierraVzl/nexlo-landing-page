@@ -8,6 +8,7 @@ const ServicesSection = defineAsyncComponent(() => import("@/components/sections
 const VisionSection = defineAsyncComponent(() => import("@/components/sections/VisionSection.vue"));
 const TeamSection = defineAsyncComponent(() => import("@/components/sections/TeamSection.vue"));
 const TestimonialsSection = defineAsyncComponent(() => import("@/components/sections/TestimonialsSection.vue"));
+const FaqSection = defineAsyncComponent(() => import("@/components/sections/FaqSection.vue"));
 const CtaSection = defineAsyncComponent(() => import("@/components/sections/CtaSection.vue"));
 const FooterSection = defineAsyncComponent(() => import("@/components/sections/FooterSection.vue"));
 </script>
@@ -23,6 +24,7 @@ const FooterSection = defineAsyncComponent(() => import("@/components/sections/F
             <!-- <MetricsSection /> -->
             <TeamSection />
             <TestimonialsSection />
+            <FaqSection />
             <CtaSection />
         </main>
         <FooterSection />
