@@ -181,7 +181,7 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                     />
 
                     <div
-                        class="relative w-full"
+                        class="relative w-full max-w-[360px] lg:max-w-none"
                         style="aspect-ratio: 5/6"
                         role="img"
                         aria-label="Ilustración decorativa del equipo Nexlo"
@@ -189,7 +189,7 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                         <img
                             :src="heroImage"
                             alt="Hero visual Nexlo"
-                            class="absolute"
+                            class="absolute inset-0 h-full w-full object-contain object-center"
                             width="480"
                             height="576"
                             fetchpriority="high"
@@ -213,11 +213,11 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                         </div>
 
                         <div
-                            class="absolute bottom-23 left-0 flex flex-col gap-3"
+                            class="absolute bottom-14 left-0 md:-left-4 flex flex-col gap-2 md:bottom-8 lg:gap-3 lg:bottom-18 lg:left-0"
                             style="right: 5%"
                         >
                             <div
-                                class="relative h-14 w-14 overflow-hidden rounded-2xl ring-2 ring-nexlo-blue-light/40 shadow-[0_8px_30px_oklch(0.62_0.22_255_/_0.35)]"
+                                class="relative h-10 w-10 overflow-hidden rounded-xl ring-2 ring-nexlo-blue-light/40 md:h-14 md:w-14 lg:rounded-2xl"
                                 style="
                                     background: oklch(0.62 0.22 255);
                                     box-shadow: 0 0 24px
@@ -237,12 +237,12 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                                     class="relative z-10 flex h-full w-full items-center justify-center"
                                 >
                                     <Briefcase
-                                        class="size-6 text-white opacity-90"
+                                        class="size-4 text-white opacity-90 md:size-6"
                                     />
                                 </div>
                             </div>
                             <div
-                                class="relative h-14 w-14 overflow-hidden rounded-2xl ring-2 ring-nexlo-blue-light/40 shadow-[0_8px_30px_oklch(0.62_0.22_255_/_0.35)]"
+                                class="relative h-10 w-10 overflow-hidden rounded-xl ring-2 ring-nexlo-blue-light/40 md:h-14 md:w-14 lg:rounded-2xl"
                                 style="
                                     background: oklch(0.62 0.22 255);
                                     box-shadow: 0 0 24px
@@ -262,7 +262,7 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                                     class="relative z-10 flex h-full w-full items-center justify-center"
                                 >
                                     <Mail
-                                        class="size-6 text-white opacity-90"
+                                        class="size-4 text-white opacity-90 md:size-6"
                                     />
                                 </div>
                             </div>
@@ -276,14 +276,14 @@ const noiseBg = `url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/sv
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Contactar por WhatsApp"
-                                        class="group absolute top-3 right-3 flex h-15 w-15 flex-col items-center justify-center rounded-full shadow-xl transition-transform hover:scale-105"
+                                        class="group absolute top-6 right-2 lg:top-9 lg:right-3 md:-right-1 md:top-3 flex h-10 w-10 flex-col items-center justify-center rounded-full shadow-xl transition-transform hover:scale-105 md:h-15 md:w-15"
                                         style="
                                             background: oklch(0.62 0.22 255);
                                             box-shadow: 0 0 24px oklch(0.52 0.22 255 / 0.5);
                                         "
                                     >
                                         <MessageCircle
-                                            class="size-6 text-white"
+                                            class="size-4 text-white md:size-6"
                                             aria-hidden="true"
                                         />
                                     </a>
